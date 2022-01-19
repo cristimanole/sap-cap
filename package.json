@@ -12,12 +12,16 @@
   },
   "devDependencies": {
     "@sap/ux-specification": "^1.96.0",
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
+    "mocha": "^9.1.4",
     "sqlite3": "^5.0.2"
   },
   "scripts": {
     "start": "cds run",
     "watch-risks": "cds watch --open risks/webapp/index.html#fe-lrop-v4",
-    "watch-mitigations": "cds watch --open mitigations/webapp/index.html#fe-lrop-v4"
+    "watch-mitigations": "cds watch --open mitigations/webapp/index.html#fe-lrop-v4",
+    "test": "mocha tests/test.js --timeout 15000 --exit"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
